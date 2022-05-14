@@ -12,7 +12,11 @@ import java.util.Optional;
 메소드도 비즈니스와 밀접하게 네이밍 한다
  */
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입
