@@ -13,11 +13,9 @@ import java.util.Optional;
 서비스쪽 메소드는 비즈니스를 처리한다
 메소드도 비즈니스와 밀접하게 네이밍 한다
  */
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
